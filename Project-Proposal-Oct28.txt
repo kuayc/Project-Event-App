@@ -1,28 +1,29 @@
 Project Title:
-Weather Plus Plus
+Location Event App
 
 Team Members:
 Irene Lee, Martin Nguyen, Chin Kuay
 
-Project Description:
-Beginning with the provision of local weather information,
-the project includes free user signups, user authentication, current weather, and 5-day forecast.
-Add-ons include information about concerts and events near user's location.
-User has the option of purchasing tickets of events.
+Project Description (Event App - MVP)
+Begin with prompt of user preference to enter location or search for auto location.
+With user location, display upcoming nearby events such as concerts, sports
+Break events into categories (eg sports, concerts, others).
+Let user select interested events.
+Point user to link (eg Ticket Master) to purchase tickets in advance.
 
 Future Features:
-Future add-on to assist user's travel plans.
-App can provide weather for travel site.
-Further, app can provide airline, hotel, car rental informaton and booking service
-(aka Travelocity clone)
+Split events into groups
+Allow users to purchase tickets for events.
+For each link, possibility of monetizing.
 
 Sketch of Design:
 TBD
 
 APIs To Be Used:
-Open Weather, Ticket Master
+Geo Location API
+Ticket Master API
 
 Task Breakdown:
-CSS/Bootstrap/Flexbox Developer (Styling Ninja): Martin
-Javascript/JQuery Developer (User signup/Firebase/Database Guru): Irene
-Javascript/JQuery Developer (API King): Chin
+Javascript/JQuery/CSS/Bootstrap Developer (Geo-Location/Ticket-Master API): Irene
+Javascript/JQuery/CSS/Bootstrap Developer (Geo-Location/Ticket-Master API): Martin
+Javascript/JQuery/CSS/Bootstrap Developer (Geo-Location/Ticket-Master API): Chin
