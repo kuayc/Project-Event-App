@@ -1,0 +1,28 @@
+Project Title:
+Weather Plus Plus
+
+Team Members:
+Irene Lee, Martin Nguyen, Chin Kuay
+
+Project Description:
+Beginning with the provision of local weather information,
+the project includes free user signups, user authentication, current weather, and 5-day forecast.
+Add-ons include information about concerts and events near user's location.
+User has the option of purchasing tickets of events.
+
+Future Features:
+Future add-on to assist user's travel plans.
+App can provide weather for travel site.
+Further, app can provide airline, hotel, car rental informaton and booking service
+(aka Travelocity clone)
+
+Sketch of Design:
+TBD
+
+APIs To Be Used:
+Open Weather, Ticket Master
+
+Task Breakdown:
+CSS/Bootstrap/Flexbox Developer (Styling Ninja): Martin
+Javascript/JQuery Developer (User signup/Firebase/Database Guru): Irene
+Javascript/JQuery Developer (API King): Chin
