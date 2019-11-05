@@ -6,6 +6,7 @@
     <title>Find Local Events!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1edd95f00c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -32,6 +33,14 @@
                                 <label for="radius">Radius</label>
                                 <input type="number" class="form-control" id="radius" placeholder="Radius">
                             </div>
+                            <div class="form-group">
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
                             <button type="submit" class="btn btn-default btn-primary " id="submitButton">Submit</button>
                         </form>
                     </div>
@@ -40,7 +49,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div id="tablePanel" class="  panel   panel-primary form-group">
+                <div id="tablePanel" class="panel panel-primary form-group">
                     <div class="panel-heading">
                         My Favorite Events:
                     </div>
