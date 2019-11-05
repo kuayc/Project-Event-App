@@ -9,9 +9,18 @@ body {
 
 }
 
+h2 {
+    color: white;
+    
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #8064A2;
+}
+
 .panel > .panel-heading {
     background-image: none;
-    background-color: gray;
+    background-color: #8064A2;
     color: white;
 
 }
