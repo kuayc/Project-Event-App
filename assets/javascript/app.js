@@ -28,7 +28,7 @@ $('document').ready(function () {
                 },
             }
         });
-    })
+    });
 
     $("#submitButton").on("click", function (e) {
         e.preventDefault();
@@ -45,17 +45,12 @@ $('document').ready(function () {
             let localEvents = response._embedded.events;
             $("#dynamic-tbody").empty();
             localEvents.forEach((evt) => {
-                console.log(evt.name);
-                console.log(evt._embedded.venues[0].name);
-                console.log(evt.classifications[0].segment.name);
-                console.log(evt.dates.start.dateTime);
-                console.log(evt.url);
                 newRow = $('<tr>');
                 newRow.html(`<td>${evt.name}</td>
                     <td>${evt._embedded.venues[0].name}</td>
                     <td>${evt.classifications[0].segment.name}</td>
                     <td>${evt.dates.start.dateTime}</td>
-                    <td>${evt.url}</td>`
+                    <td style="text-align:center"><a href="${evt.url}" target="_blank"><i class="fas fa-ticket-alt"></i></a></td>`
                 )
                 $("#dynamic-tbody").append(newRow);
             })
