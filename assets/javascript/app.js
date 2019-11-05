@@ -40,6 +40,42 @@ $('document').ready(function () {
         });
     })
 
+    $("#submitButton").on("click", function (e) {
+        e.preventDefault();
+        let city = $("#city").val();
+        let zipCode = $("#zipCode").val();
+        $("#city").val('');
+        $("#zipCode").val('');
+        const tm_apiKey = 'x3UXvhKAqJX1Gu3bi4XUEaGXBEiXI1Rm';
+        const tm_url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${tm_apiKey}&city=${city}`
+        $.ajax({
+            url: tm_url,
+            method: 'GET',
+            dataType: "json"
+        }).then((response) => {
+            console.log('success', tm_url);
+            console.log(response);
+            let localEvents = response._embedded.events;
+            console.log(localEvents);
+            localEvents.forEach((evt) => {
+                console.log(evt.name);
+                console.log(evt._embedded.venues[0].name);
+                console.log(evt.classifications[0].segment.name);
+                console.log(evt.dates.start.dateTime);
+                console.log(evt.url);
+
+                newRow = $('<tr>');
+                newRow.html(`<td>${evt.name}</td>
+                    <td>${evt._embedded.venues[0].name}</td>
+                    <td>${evt.classifications[0].segment.name}</td>
+                    <td>${evt.dates.start.dateTime}</td>
+                    <td>${evt.url}</td>`
+                )
+                $("#dynamic-tbody").append(newRow);
+            })
+        })
+    })
+
 
 
 
