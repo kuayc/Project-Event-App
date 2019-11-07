@@ -50,7 +50,7 @@ $('document').ready(function () {
         console.log(startDate, endDate, 'heree');
 
         const tm_apiKey = 'x3UXvhKAqJX1Gu3bi4XUEaGXBEiXI1Rm';
-        const tm_url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${tm_apiKey}&city=${city}&size=${30}&startDateTime=${startDate}&endDateTime=${endDate}`
+        const tm_url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${tm_apiKey}&city=${city}&size=30&startDateTime=${startDate}&endDateTime=${endDate}`
         $.ajax({
             url: tm_url,
             method: 'GET',
