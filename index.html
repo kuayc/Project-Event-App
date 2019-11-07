@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Local Events!</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/1edd95f00c.js" crossorigin="anonymous"></script>
@@ -29,18 +33,8 @@
                                 <label for="city">City</label>
                                 <input type="text" class="form-control" id="city" placeholder="City">
                             </div>
-                            <div class="form-group">
-                                <label for="radius">Radius</label>
-                                <input type="number" class="form-control" id="radius" placeholder="Radius">
-                            </div>
-                            <div class="form-group">
-                                <div class='input-group date' id='datetimepicker1'>
-                                    <input type='text' class="form-control" />
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                            </div>
+                            <p>Start Date: <input type="text" id="start-datepicker"></p>
+                            <p>End Date: <input type="text" id="end-datepicker"></p>
                             <button type="submit" class="btn btn-default btn-primary " id="submitButton">Submit</button>
                         </form>
                     </div>
@@ -92,6 +86,7 @@
     <!-- javascript -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./assets/javascript/app.js"></script>
 
 </body>
