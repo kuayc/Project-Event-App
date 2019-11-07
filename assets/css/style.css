@@ -16,6 +16,7 @@ h1 {
     height: 70px;
     padding-top: 15px;
     border-radius: 25px;
+    margin-bottom: 20px;
 }
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
