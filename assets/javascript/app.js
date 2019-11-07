@@ -50,7 +50,7 @@ $('document').ready(function () {
         console.log(startDate, endDate, 'heree');
 
         const tm_apiKey = 'x3UXvhKAqJX1Gu3bi4XUEaGXBEiXI1Rm';
-        const tm_url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${tm_apiKey}&city=${city}&startDateTime=${startDate}&endDateTime=${endDate}`
+        const tm_url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${tm_apiKey}&city=${city}&size=30&startDateTime=${startDate}&endDateTime=${endDate}`
         $.ajax({
             url: tm_url,
             method: 'GET',
@@ -62,11 +62,14 @@ $('document').ready(function () {
             localEvents.forEach((evt) => {
                 newRow = $('<tr>');
                 newRow.html(`<td>${evt.name}</td>
+                <td><img class="img" src=${evt.images[8].url} style="height:50px; width:50px"></td>  
                     <td>${evt._embedded.venues[0].name}</td>
-                    <td>${evt.classifications[0].segment.name}</td>
+                    <td>${evt.classifications[0].segment.name}</td>                
                     <td>${evt.dates.start.dateTime}</td>
                     <td style="text-align:center"><a href="${evt.url}" target="_blank"><i class="fas fa-ticket-alt"></i></a></td>`
                 )
+                console.log(evt.images[8].url);
+
                 $("#dynamic-tbody").append(newRow);
             })
         })
