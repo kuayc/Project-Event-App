@@ -1,4 +1,7 @@
 $('document').ready(function () {
+    $("#start-datepicker").datepicker({ dateFormat: 'yy-mm-dd' });
+    $("#end-datepicker").datepicker({ dateFormat: 'yy-mm-dd' });
+
     navigator.geolocation.getCurrentPosition(function (position) {
         const lon = position.coords.longitude;
         const lat = position.coords.latitude;
@@ -34,8 +37,20 @@ $('document').ready(function () {
         e.preventDefault();
         let city = $("#city").val();
         $("#city").val('');
+        let startDate = $("#start-datepicker").val().toString();
+        let endDate = $("#end-datepicker").val().toString();
+        $("#start-datepicker").val('');
+        $("#end-datepicker").val('');
+        if (startDate && startDate != "") {
+            startDate += 'T00:00:00Z'
+        }
+        if (endDate && endDate != "") {
+            endDate += 'T23:59:59Z'
+        }
+        console.log(startDate, endDate, 'heree');
+
         const tm_apiKey = 'x3UXvhKAqJX1Gu3bi4XUEaGXBEiXI1Rm';
-        const tm_url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${tm_apiKey}&city=${city}`
+        const tm_url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${tm_apiKey}&city=${city}&startDateTime=${startDate}&endDateTime=${endDate}`
         $.ajax({
             url: tm_url,
             method: 'GET',
